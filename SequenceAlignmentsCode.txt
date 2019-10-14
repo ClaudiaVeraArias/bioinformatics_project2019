@@ -10,7 +10,7 @@
 
 for file in proteome_{01..50}.fasta
 do
-      /afs/crc.nd.edu/user/c/cvera/Private/muscle -in $file -out proteome_{01..50}V1.$
+      /afs/crc.nd.edu/user/c/cvera/Private/muscle -in $file -out proteome_${01..50}V1.fasta
 done
 
 
