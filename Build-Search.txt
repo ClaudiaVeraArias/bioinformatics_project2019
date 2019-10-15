@@ -1,0 +1,40 @@
+# BUILD
+
+#to build 
+
+/afs/crc.nd.edu/user/c/cvera/Private/bin/hmmbuild proteome_01HMM  proteome_01V1.fasta
+
+
+#Loop to build proteome sequences
+
+for file in proteome_{01..50}V1.fasta
+do
+/afs/crc.nd.edu/user/c/cvera/Private/bin/hmmbuild $file  proteome_{01..50}HMM proteome_{01..50}V1.fasta
+done
+
+
+#SEARCH
+
+#to search hrp70 gene (1-22) 
+
+/afs/crc.nd.edu/user/c/cvera/Private/bin/hmmsearch proteome_01HMM hsp70gene_01.fasta
+
+
+#Loop to search hrp70 gene (1-22)
+
+for file in proteome_{01..50}V1.fasta
+do
+/afs/crc.nd.edu/user/c/cvera/Private/bin/hmmsearch $file  hsp70gene_{01..22}.fasta
+done
+
+
+#to search mcrAgene (1-18)
+
+/afs/crc.nd.edu/user/c/cvera/Private/bin/hmmsearch proteome_01HMM mcrAgene_01.fasta
+
+#Loop to search mcrAgene (1-18)
+
+for file in proteome_{01..50}HMM
+do
+/afs/crc.nd.edu/user/c/cvera/Private/bin/hmmsearch $file  mcrAgene_{01..18}.fasta
+done

@@ -1,0 +1,16 @@
+
+#code to sequence alignments
+#/afs/crc.nd.edu/user/c/cvera/Private/muscle -> path to open muscle to alignmen$
+#proteome_01.fasta  -> sample name
+#proteome_01V1.fasta -> new sample name (sequence alignments)
+
+/afs/crc.nd.edu/user/c/cvera/Private/muscle -in proteome_01.fasta -out proteome$
+
+# loop for sequence alignments
+
+for file in proteome_{01..50}.fasta
+do
+      /afs/crc.nd.edu/user/c/cvera/Private/muscle -in $file -out proteome_${01..50}V1.fasta
+done
+
+
