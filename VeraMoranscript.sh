@@ -21,10 +21,11 @@ rm $@.fasta
 
 # We need a summary table collating the results of all searches
 
+
 #for proteome in *.fasta
 #do
 #    ~/Private/programs/hmmer-3.2/bin/hmmsearch -o output.txt $1.hmm $proteome
-#    cat output.txt | grep 'target sequence' |
+#    cat output.txt | grep 'target sequence' | cut -f 9 -d ' ' >> Columns.txt
 #done
 
 
