@@ -16,6 +16,11 @@ rm $@.fasta
 
 ~/Private/programs/hmmer-3.2/bin/hmmbuild $@.hmm $@.afa
 
+# This part needs to run each proteome through
+# the hmmsearch and then pull out each alignment
+
+# We need a summary table collating the results of all searches
+
 #for proteome in *.fasta
 #do
 #    ~/Private/programs/hmmer-3.2/bin/hmmsearch -o output.txt $1.hmm $proteome
