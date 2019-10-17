@@ -1,0 +1,21 @@
+
+    4.2e-42  140.0   0.3    1.8e-41  138.0   0.1    2.1  2  WP_048120720.1  MULTISPECIES: coenzyme-B sulfoethylthiotransf
+    8.9e-38  126.1   0.1    2.2e-37  124.8   0.1    1.7  1  WP_011449112.1  coenzyme-B sulfoethylthiotransferase subunit
+    1.9e-36  121.5   0.0    4.7e-36  120.2   0.0    1.7  1  WP_012106121.1  coenzyme-B sulfoethylthiotransferase subunit
+    3.2e-39  129.8   0.1      7e-39  128.7   0.1    1.6  1  WP_011972678.1  coenzyme-B sulfoethylthiotransferase subunit
+    2.7e-38  127.7   0.6    7.2e-38  126.3   0.6    1.7  1  WP_012035370.1  coenzyme-B sulfoethylthiotransferase subunit
+    1.1e-39  132.0   0.4    2.4e-39  130.9   0.4    1.5  1  WP_048111146.1  coenzyme-B sulfoethylthiotransferase subunit
+    8.8e-35  116.3   0.0    1.9e-34  115.2   0.0    1.6  1  WP_015286563.1  coenzyme-B sulfoethylthiotransferase subunit
+    6.5e-42  138.4   0.7    2.1e-41  136.8   0.1    2.1  2  WP_011954235.1  MULTISPECIES: coenzyme-B sulfoethylthiotransf
+    2.5e-38  127.0   0.6    4.4e-38  126.2   0.1    1.7  2  WP_011954158.1  MULTISPECIES: coenzyme-B sulfoethylthiotransf
+    6.4e-42  139.4   0.1    2.2e-41  137.7   0.0    2.0  2  WP_011033189.1  coenzyme-B sulfoethylthiotransferase subunit
+    4.5e-43  141.9   0.8    1.2e-42  140.6   0.1    2.0  2  WP_013099697.1  coenzyme-B sulfoethylthiotransferase subunit
+    2.7e-38  127.7   0.6    7.2e-38  126.3   0.6    1.7  1  WP_012035370.1  coenzyme-B sulfoethylthiotransferase subunit
+    2.7e-38  127.7   0.6    7.2e-38  126.3   0.6    1.7  1  WP_012035370.1  coenzyme-B sulfoethylthiotransferase subunit
+    4.2e-42  140.0   0.3    1.8e-41  138.0   0.1    2.1  2  WP_048120720.1  MULTISPECIES: coenzyme-B sulfoethylthiotransf
+    2.7e-38  127.7   0.6    7.2e-38  126.3   0.6    1.7  1  WP_012035370.1  coenzyme-B sulfoethylthiotransferase subunit
+    4.2e-42  140.0   0.3    1.8e-41  138.0   0.1    2.1  2  WP_048120720.1  MULTISPECIES: coenzyme-B sulfoethylthiotransf
+    2.7e-38  127.7   0.6    7.2e-38  126.3   0.6    1.7  1  WP_012035370.1  coenzyme-B sulfoethylthiotransferase subunit
+    4.2e-42  140.0   0.3    1.8e-41  138.0   0.1    2.1  2  WP_048120720.1  MULTISPECIES: coenzyme-B sulfoethylthiotransf
+
+
