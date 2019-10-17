@@ -1,5 +1,13 @@
 # Usage: bash VeraMoranscript.sh <refdirectory> no slash
 
+# In order to use this script you need the
+# following programs:
+# muscle
+# hmmer-3.2
+# In your home directory you should place both programs
+# within Private/programs/
+
+
 # This is a script to take all ref files and add to one file
 
 for file in $@/*.fasta
@@ -19,7 +27,7 @@ rm $@.fasta
 # This part needs to run each proteome through
 # the hmmsearch and then pull out each alignment
 
-#1) for samples with hsp90ref 
+#1) for samples with hsp90ref
 
 for file in proteome*.fasta
 do
@@ -38,7 +46,7 @@ done
 #for proteome in *.fasta
 #do
 #    ~/Private/programs/hmmer-3.2/bin/hmmsearch -o output.txt $1.hmm $proteome
-#    cat output.txt | grep 'target sequence' | 
+#    cat output.txt | grep 'target sequence' |
 #done
 
 
