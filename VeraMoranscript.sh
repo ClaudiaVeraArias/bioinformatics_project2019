@@ -46,7 +46,7 @@ done
 #for proteome in *.fasta
 #do
 #    ~/Private/programs/hmmer-3.2/bin/hmmsearch -o output.txt $1.hmm $proteome
-#    cat output.txt | grep 'target sequence' |
+#    cat output.txt | egrep "^ {1,4}[0-9][.][0-9]*-?[0-9a-zA-Z]" > Columns.txt
 #done
 
 
