@@ -1,18 +1,4 @@
-# Usage: bash VeraMoranscript.sh <refdirectory> no slash
-
-# In order to use this script you need the
-# following programs:
-# muscle
-# hmmer-3.2
-# In your home directory you should place both programs
-# within Private/programs/
-
-
-# This is a script to take all ref files and add to one file
-
-
-
-# Usage: bash VeraMoranscript.sh <refdirectory> no slash
+# Usage: bash VeraMoranscript.sh <name/of/directory>
 
 # In order to use this script you need the
 # following programs:
