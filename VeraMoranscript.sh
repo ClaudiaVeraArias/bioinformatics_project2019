@@ -1,4 +1,12 @@
-# Usage: generate two files. One of them show how many matches have the samples with the two reference genes
+# Usage: bash VeraMoranscript <directory/for/each/gene/of/interest>
+# Note: do not include slash after directory.
+# Each set of reference genes should be in it's own directory.
+# Proteome files should end in .fasta and they should be found in a subdirectory of
+# the  directory that VeraMoran.sh is in. This subdirectory should be named proteomes/
+# Example: bash VeraMoranscript hsp70gene mcrAgene
+# Report.txt shows how many matches have the samples with the two reference genes
+# TopHits.txt shows the best matches for pH resistant methanogens
+#
 
 
 # In order to use this script you need the
@@ -7,6 +15,7 @@
 # hmmer-3.2
 # In your home directory you should place both programs
 # within Private/programs/
+# hmmer binary directory (bin) was placed within the hmmer-3.2 directory
 
 
 ## This is a script to take all ref files (hsp70 and mcrA) and add to one file named "refs.fasta"
@@ -28,7 +37,7 @@ echo $file >> summaryfile_$file.txt
 
 # This script will take all proteomes (samples) and will compare with reference profile HMM file
 # it will create a table with all the matches between proteomes and HMM file and will
-# the file that contains the table will be called "Report.txt" 
+# the file that contains the table will be called "Report.txt"
 
 for filename in proteomes/*.fasta
 do
