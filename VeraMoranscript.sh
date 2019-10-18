@@ -17,8 +17,11 @@
 # within Private/programs/
 # hmmer binary directory (bin) was placed within the hmmer-3.2 directory
 
+# Start by clearing any files that may confuse the script
+rm summaryfile*
 
 ## This is a script to take all ref files (hsp70 and mcrA) and add to one file named "refs.fasta"
+
 for file in $@
 do
 cat $file/* > refs.fasta
