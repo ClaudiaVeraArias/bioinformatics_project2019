@@ -8,46 +8,42 @@
 # within Private/programs/
 
 
-# This is a script to take all ref files and add to one file
-
-for file in $@/*.fasta
+## This is a script to take all ref files and add to one file
+for file in $@
 do
-    cat $file >> $@.fasta
-done
+cat $file/* > refs.fasta
 
 # This script will take our fasta files and run them through muscle
 
-~/Private/programs/muscle -in $@.fasta -out $@.afa
-rm $@.fasta
+~/Private/programs/muscle -in refs.fasta -out $file.afa
 
-# This script will take our files and run through hmmr
+# This script will take our files and run through hmmer
 
-~/Private/programs/hmmer-3.2/bin/hmmbuild $@.hmm $@.afa
+~/Private/programs/hmmer-3.2/bin/hmmbuild $file.hmm $file.afa
 
-# This part needs to run each proteome through
-# the hmmsearch and then pull out each alignment
+#
+rm summaryfile_$file.txt
 
-#1) for samples with hsp90ref
+echo $file >> summaryfile_$file.txt
 
-for file in proteome*.fasta
+for filename in proteomes/*.fasta
 do
-    ~/Private/programs/hmmer-3.2.1/bin/hmmsearch hsp90HMM $file >> Search_hsp90.txt
+    ~/Private/programs/hmmer-3.2/bin/hmmsearch --tblout output_tblout.txt -o output.txt -A outputA.txt $file.hmm $filename
+    numberofmatchingproteins=$(cat output_tblout.txt | egrep -o '^[WY]P[^ ]+' | sort | uniq | wc -l)
+    echo "$numberofmatchingproteins" >> summaryfile_$file.txt
 done
 
-#2) for samples with mcrAref
+rm output_tblout.txt output.txt outputA.txt
 
-for file in proteome*.fasta
-do
-~/Private/programs/hmmer-3.2.1/bin/hmmsearch mcrArefHMM $file >> Search_mcrA.txt
 done
-# We need a summary table collating the results of all searches
+rm Report.txt
+echo This file has the info > Report.txt
+echo Proteome ID > proteomename.txt
+ls proteomes/ >> proteomename.txt
+paste proteomename.txt summaryfile_*.txt > Report.txt
 
-
-#for proteome in *.fasta
-#do
-#    ~/Private/programs/hmmer-3.2/bin/hmmsearch -o output.txt $1.hmm $proteome
-#    cat output.txt | egrep "^ {1,4}[0-9][.][0-9]*-?[0-9a-zA-Z]" > Columns.txt
-#done
-
-
-
+rm TopHits.txt
+echo "The following proteomes are the best candidates to be pH-resistant methanogens." >> TopHits.txt
+var=$(cat Report.txt | head -n 1)
+echo "$var" >> TopHits.txt
+cat Report.txt | grep -v 'Proteome ID' | grep -v "0$" | grep -v "0\t" | sort -n -k2,2nr -k3,3nr >> TopHits.txt
